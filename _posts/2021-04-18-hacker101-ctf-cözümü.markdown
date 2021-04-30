@@ -61,7 +61,7 @@ Sayfaları açtığımız zaman sıralı bir şekilde tutulduğu göze çarpmakt
 
 Link üzerinden sırayla sayfaları denediğimiz çoğunda sayfa bulunmuyordu,
 
-![image](/blog/images/hackerone/2/Flag 1/9.JPG)
+![image](/blog/images/hackerone/2/Flag 1/9.jpg)
 
 fakat yetkimiz olmayan bir sayfaya denk geldim.
 
