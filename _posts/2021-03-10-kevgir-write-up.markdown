@@ -19,7 +19,7 @@ Elde edilen ip adreslerinden 10.0.2.14 hedef makinemize ait olduğu aşağıdaki
 
 ![image](/blog/images/kevgir/2.jpg)
 
-Nmap aracı ile nmap –sS –sV –p- 10.0.2.14  komutunu kullanarak port taraması gerçekleştirebiliriz.
+Nmap aracı ile *nmap –sS –sV –p- 10.0.2.14*  komutunu kullanarak port taraması gerçekleştirebiliriz.
 
 ![image](/blog/images/kevgir/3.jpg)
 
@@ -31,7 +31,7 @@ tomcat ile ilgili auxiliary ve exploitleri araştırdım. Çıktılar aşağıda
 
 ![image](/blog/images/kevgir/5.jpg)
 
-Öncelikle tomcat_mgr_login auxiliary ile tomcat servisinin default şifrelerini denedim. (Şifre tespiti brute force ile tespit edilmeye çalışılmaktadır.) 
+Öncelikle *tomcat_mgr_login auxiliary* ile tomcat servisinin default şifrelerini denedim. (Şifre tespiti brute force ile tespit edilmeye çalışılmaktadır.) 
 
 ![image](/blog/images/kevgir/6.jpg)
 
@@ -43,7 +43,7 @@ Hedef makinenin IP adresini girerek işlemimizi başlatıyoruz.
 
 ![image](/blog/images/kevgir/8.jpg)
 
-Kullanıcı adı – şifre tespitinden sonra tomcat_mgr_upload exploitini kullanarak sisteme sızmaya çalıyoruz. Bu işlemle beraber tarıyıcıdan 10.0.2.14:8080/manager adresine de giriş yapıyoruz. Bunu yaparak shell atabilmekteyiz.
+Kullanıcı adı – şifre tespitinden sonra *tomcat_mgr_upload* exploitini kullanarak sisteme sızmaya çalıyoruz. Bu işlemle beraber tarıyıcıdan *10.0.2.14:8080/manager* adresine de giriş yapıyoruz. Bunu yaparak shell atabilmekteyiz.
 
 ![image](/blog/images/kevgir/9.jpg)
 
@@ -56,7 +56,7 @@ Meterpreter komut satırına shell yazarak linux komut satırına geçiş yapıy
 
 ![image](/blog/images/kevgir/11.jpg)
 
-python –c ‘import pty;pty.swan (“/bin/sh”)’  komutunu kullanarak shellimizi etkileşimli shell e çeviriyoruz.
+python –c *import pty;pty.swan (“/bin/sh”)*  komutunu kullanarak shellimizi etkileşimli shell e çeviriyoruz.
 
 ![image](/blog/images/kevgir/12.jpg)
 
@@ -76,7 +76,7 @@ Hash değerinin çözümlemesini hashcat gibi toollar ile yapabileceğimiz gibi 
 
 ![image](/blog/images/kevgir/16.jpg)
 
-Sistemin çekirdek bilgisini öğrenmek için uname –a komutunu kullanıyoruz.
+Sistemin çekirdek bilgisini öğrenmek için *uname –a* komutunu kullanıyoruz.
 
 ![image](/blog/images/kevgir/17.jpg)
 

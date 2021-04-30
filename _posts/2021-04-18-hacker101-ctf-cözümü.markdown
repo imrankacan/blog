@@ -53,7 +53,7 @@ Oluşturduğumuz sayfaların başarılı bir şekilde oluşturulmuş olduğunu a
 
 ![image](/blog/images/hackerone/2/Flag 1/6.JPG)
 
-Sayfaları açtığımız zaman sıralı bir şekilde tutulduğu göze çarpmaktadır fakat sayfalarımızın sıralamasın 2 den 10 a arttığı göze çarpmaktadır. (Şekil 2.3 te 1-2 görülmektedir.) 
+Sayfaları açtığımız zaman sıralı bir şekilde tutulduğu göze çarpmaktadır fakat sayfalarımızın sıralamasın 2 den 10 a arttığı göze çarpmaktadır. 
 
 ![image](/blog/images/hackerone/2/Flag 1/7.JPG)
 
@@ -87,7 +87,7 @@ Sql açığı olup olmadığını kontrol ettiğimizde düzenleme sayfasında a�
 
 ### 2.3 - Flag 3
 
-XSS açığı olup olmadığını kontrol etmek adına girdi ekleyebildiğimiz (Edit Page) alana <script>alert(10Nisan)<\script> yazarak kaydediyoruz.
+XSS açığı olup olmadığını kontrol etmek adına girdi ekleyebildiğimiz (Edit Page) alana *< script > alert (10Nisan)< \script >* yazarak kaydediyoruz.
 
 ![image](/blog/images/hackerone/2/Flag 3/1.JPG)
 
@@ -99,7 +99,7 @@ Ana sayfaya döndüğümüzde 3. Flag i de elde etmiş oluyoruz.
 
 ### 2.4 - Flag 4
 
-Başlık kısmında xss açığından yararlanmıştık. Şimdi ise açıklama kısmı için deniyoruz. Bu deneme için kullanacağımız payload ==> <img src=xss onerror=alert(1)>
+Başlık kısmında xss açığından yararlanmıştık. Şimdi ise açıklama kısmı için deniyoruz. Bu deneme için kullanacağımız payload ==> *< img src=xss onerror=alert(1) >*
 
 ![image](/blog/images/hackerone/2/Flag 4/1.JPG)
 
