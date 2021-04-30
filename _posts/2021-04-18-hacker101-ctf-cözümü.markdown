@@ -61,23 +61,23 @@ Sayfaları açtığımız zaman sıralı bir şekilde tutulduğu göze çarpmakt
 
 Link üzerinden sırayla sayfaları denediğimiz çoğunda sayfa bulunmuyordu,
 
-![image](/blog/images/hackerone/2/Flag 1/10.JPG)
+![image](/blog/images/hackerone/2/Flag 1/9.JPG)
 
 fakat yetkimiz olmayan bir sayfaya denk geldim.
 
-![image](/blog/images/hackerone/2/Flag 1/11.JPG) ![image](/blog/images/hackerone/2/Flag 1/12.JPG)
+![image](/blog/images/hackerone/2/Flag 1/10.JPG) ![image](/blog/images/hackerone/2/Flag 1/11.JPG)
 
 Sonrasında  Markdown Test sayfasında 'Edit this page' seçeneğini kullanarak link kısmından yetkimiz olmayan sayfaya giderek düzenleme yapıp yapamayacağımızı test ediyoruz.
 
-![image](/blog/images/hackerone/2/Flag 1/13.JPG)
+![image](/blog/images/hackerone/2/Flag 1/12.JPG)
 
 Sayfaya gittiğimiz zaman Flag elde ediyoruz.
 
-![image](/blog/images/hackerone/2/Flag 1/14.JPG)
+![image](/blog/images/hackerone/2/Flag 1/13.JPG)
 
 Flag i kontrol ettiğimiz zaman doğru olduğunu gözlemleyebiliriz.
 
-![image](/blog/images/hackerone/2/Flag 1/15.JPG)
+![image](/blog/images/hackerone/2/Flag 1/14.JPG)
 
 ### 2.2 - Flag 2
 
