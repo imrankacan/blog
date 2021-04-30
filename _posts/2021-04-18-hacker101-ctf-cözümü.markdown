@@ -7,7 +7,7 @@ date: 2021-03-24 00:00:00 +0300
 
 ----------------------------------------------
 
-## A Little Something to Get You Started / Web
+## 1 - A Little Something to Get You Started / Web
 
 ![image](/blog/images/hackerone/1/1.JPG)
 
@@ -31,9 +31,9 @@ Aşağıda da görüldüğü üzere elde ettiğimiz flag doğru.
 
 ![image](/blog/images/hackerone/1/6.JPG)
 
-## Micro-CMS v1 / Web
+## 2 - Micro-CMS v1 / Web
 
-### Flag 1
+### 2.1 - Flag 1
 
 ![image](/blog/images/hackerone/2/Flag 1/1.JPG)
 
@@ -61,33 +61,31 @@ Sayfaları açtığımız zaman sıralı bir şekilde tutulduğu göze çarpmakt
 
 Link üzerinden sırayla sayfaları denediğimiz çoğunda sayfa bulunmuyordu,
 
-![image](/blog/images/hackerone/2/Flag 1/9.JPG)
+![image](/blog/images/hackerone/2/Flag 1/10.JPG)
 
 fakat yetkimiz olmayan bir sayfaya denk geldim.
 
-![image](/blog/images/hackerone/2/Flag 1/10.JPG)
+![image](/blog/images/hackerone/2/Flag 1/11.JPG) ![image](/blog/images/hackerone/2/Flag 1/12.JPG)
 
 Sonrasında  Markdown Test sayfasında 'Edit this page' seçeneğini kullanarak link kısmından yetkimiz olmayan sayfaya giderek düzenleme yapıp yapamayacağımızı test ediyoruz.
 
-![image](/blog/images/hackerone/2/Flag 1/11.JPG)
-
-![image](/blog/images/hackerone/2/Flag 1/12.JPG)
+![image](/blog/images/hackerone/2/Flag 1/13.JPG)
 
 Sayfaya gittiğimiz zaman Flag elde ediyoruz.
 
-![image](/blog/images/hackerone/2/Flag 1/13.JPG)
+![image](/blog/images/hackerone/2/Flag 1/14.JPG)
 
 Flag i kontrol ettiğimiz zaman doğru olduğunu gözlemleyebiliriz.
 
-![image](/blog/images/hackerone/2/Flag 1/14.JPG)
+![image](/blog/images/hackerone/2/Flag 1/15.JPG)
 
-### Flag 2
+### 2.2 - Flag 2
 
 Sql açığı olup olmadığını kontrol ettiğimizde düzenleme sayfasında açık olduğunu gözlemliyoruz ve Flag elde ediyoruz.
 
 ![image](/blog/images/hackerone/2/Flag 2/1.JPG)
 
-### Flag 3
+### 2.3 - Flag 3
 
 XSS açığı olup olmadığını kontrol etmek adına girdi ekleyebildiğimiz (Edit Page) alana <script>alert(10Nisan)<\script> yazarak kaydediyoruz.
 
@@ -99,7 +97,7 @@ Ana sayfaya döndüğümüzde 3. Flag i de elde etmiş oluyoruz.
 
 ![image](/blog/images/hackerone/2/Flag 3/3.JPG)
 
-### Flag 4
+### 2.4 - Flag 4
 
 Başlık kısmında xss açığından yararlanmıştık. Şimdi ise açıklama kısmı için deniyoruz. Bu deneme için kullanacağımız payload ==> <img src=xss onerror=alert(1)>
 
