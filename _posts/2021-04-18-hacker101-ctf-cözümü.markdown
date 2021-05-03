@@ -9,6 +9,8 @@ date: 2021-03-24 00:00:00 +0300
 
 ## 1 - A Little Something to Get You Started / Web
 
+### 1.1 - Flag (1/1)
+
 ![image](/blog/images/hackerone/1/1.JPG)
 
 Aşağıda görüldüğü gibi sayfayı incele dediğimiz zaman 'background.png' dosyasını gözlemliyoruz.
@@ -33,7 +35,7 @@ Aşağıda da görüldüğü üzere elde ettiğimiz flag doğru.
 
 ## 2 - Micro-CMS v1 / Web
 
-### 2.1 - Flag 1
+### 2.1 - Flag (1/4)
 
 ![image](/blog/images/hackerone/2/Flag 1/1.JPG)
 
@@ -79,13 +81,13 @@ Flag i kontrol ettiğimiz zaman doğru olduğunu gözlemleyebiliriz.
 
 ![image](/blog/images/hackerone/2/Flag 1/14.JPG)
 
-### 2.2 - Flag 2
+### 2.2 - Flag (2/4)
 
 Sql açığı olup olmadığını kontrol ettiğimizde düzenleme sayfasında açık olduğunu gözlemliyoruz ve Flag elde ediyoruz.
 
 ![image](/blog/images/hackerone/2/Flag 2/1.JPG)
 
-### 2.3 - Flag 3
+### 2.3 - Flag (3/4)
 
 XSS açığı olup olmadığını kontrol etmek adına girdi ekleyebildiğimiz (Edit Page) alana *< script > alert (10Nisan)< \script >* yazarak kaydediyoruz.
 
@@ -97,7 +99,7 @@ Ana sayfaya döndüğümüzde 3. Flag i de elde etmiş oluyoruz.
 
 ![image](/blog/images/hackerone/2/Flag 3/3.JPG)
 
-### 2.4 - Flag 4
+### 2.4 - Flag (4/4)
 
 Başlık kısmında xss açığından yararlanmıştık. Şimdi ise açıklama kısmı için deniyoruz. Bu deneme için kullanacağımız payload ==> *< img src=xss onerror=alert(1) >*
 
