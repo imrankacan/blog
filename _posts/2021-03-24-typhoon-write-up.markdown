@@ -7,6 +7,8 @@ date: 2021-03-24 00:00:00 +0300
 
 ----------------------------------------------
 
+Zafiyetli makineyi <a href="https://www.prismacsi.com/typhoon-vulnerable-vm/">buradan</a> indirebilirsiniz.
+
 
 *ifconfig* komutu ile ip adresimi kontrol ettiğimde ip adresimin '10.0.2.5' olduğunu gözlemledim. Öncelikle *netdiscover -r 10.0.0.0/16* komutu ile cihazımızın bulunduğu ağdaki hostları gözlemleyerek hedef makinamızın ip sini tespit ediyoruz.
 

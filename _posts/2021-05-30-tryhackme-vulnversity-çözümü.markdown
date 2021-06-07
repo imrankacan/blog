@@ -75,6 +75,127 @@ Bir sonraki task ise GoBuster i kullanmaya yönelik.
 ![image](/blog/images/vulnversity/14.JPG)
 #### Şekil 1.14
 
-Bu araç kalide kurulu olarak gelmektedir. Kurulu olmaması durumunda https://github.com/OJ/gobuster adresinden ya da Kali Linux 2020.1 ve üzeri bir sürüm kullanılması durumunda sudo apt-get install gobuster komutu ile kurulumu gerçekletirebilmek mümkündür. 
+Bu araç kalide kurulu olarak gelmektedir. Kurulu olmaması durumunda <a href="https://github.com/OJ/gobuster">buradan</a> ya da Kali Linux 2020.1 ve üzeri bir sürüm kullanılması durumunda sudo apt-get install gobuster komutu ile kurulumu gerçekletirebilmek mümkündür. 
 
-<a href="https://github.com/OJ/gobuster">Buradan</a>
+![image](/blog/images/vulnversity/15.JPG)
+#### Şekil 1.15
+
+‘common.txt’ wordlistini kullanarak taramamızı başlatıyoruz. (Wordlist makinede hazır olarak bulunmaktadır.)
+
+![image](/blog/images/vulnversity/16.JPG)
+#### Şekil 1.16
+
+Tarama sonucunda bir adet index.html elde ettik.
+
+![image](/blog/images/vulnversity/17.JPG)
+#### Şekil 1.17
+
+Tarayıcıdan index.html e gittiğimizde karşımıza aşağıdaki sayfa çıktı. 
+
+![image](/blog/images/vulnversity/18.JPG)
+#### Şekil 1.18
+
+Fakat bizden yükleme yapabileceğimiz alana sahip sayfa istenmektedir ve index.html sayfasında böyle bir alan bulunmamaktadır.
+
+![image](/blog/images/vulnversity/19.JPG)
+#### Şekil 1.19
+
+Şimdi ise şekil 1.17 deki taramada elde ettiğimiz internal sayfasını kontrol ediyoruz.
+
+![image](/blog/images/vulnversity/20.JPG)
+#### Şekil 1.20
+
+Bunun sonucunda aradımızın sayfanın ‘internal’ dizini olduğunu gözlemliyoruz.
+
+![image](/blog/images/vulnversity/21.JPG)
+#### Şekil 1.21
+
+Bir sonraki task e geçtiğimzde ilk soruda elde ettiğimiz yüklenebilir sayfada hangi uzantılı sayfanın engellenmiş olduğunu sormaktadır. Bir kaç farklı uzantılı sayfayı yuklemeyi denedikten sonra ‘.php’ uzantılı sayfaların engellenmiş olduğunu gözlemledik.
+
+![image](/blog/images/vulnversity/22.JPG)
+#### Şekil 1.22
+
+Bir sonraki işlem için bir adet wordlist oluşturuyoruz.
+
+![image](/blog/images/vulnversity/23.JPG)
+#### Şekil 1.23
+
+Sonrasında trafiği yakalamak adına Burp Suite yi aktif ediyoruz.
+
+![image](/blog/images/vulnversity/24.JPG)
+#### Şekil 1.24
+
+Sayfamıza dosya yükleyerek trafiğin oluşmasını sağlıyoruz.
+
+![image](/blog/images/vulnversity/25.JPG)
+#### Şekil 1.25
+
+İşlem sonrasında Burp Suite trafiği yakalamaktadır.
+
+![image](/blog/images/vulnversity/26.JPG)
+#### Şekil 1.26
+
+Sağ tıklayıp ‘Send to Intruder’ seçeneğini seçiyoruz.
+
+![image](/blog/images/vulnversity/27.JPG)
+#### Şekil 1.27
+
+Çıkan ekranda ‘Possitions’ seçeneğinden atak tipini ‘sniper’ seçiyoruz ve atak yapılacak kısmı seçiyoruz.
+
+![image](/blog/images/vulnversity/28.JPG)
+#### Şekil 1.28
+
+Payloads sekmesinden ise hazırladığımız word list i ekliyoruz. (Bu ekrandan elle girişte yapabilmemiz mümkündür.)
+
+![image](/blog/images/vulnversity/29.JPG)
+#### Şekil 1.29
+
+Sonrasında ‘Start Attack’ diyerek saydırıyı başlatıyoruz.
+Atak sonucunda tüm değerler 200 döndürdü fakat elle tek tek denedikten sonra aradığımız cevabın ‘.phtml’ olduğunu gözlemliyoruz. 
+
+![image](/blog/images/vulnversity/30.JPG)
+#### Şekil 1.30
+
+Bir sonraki işlem için sayfamıza ‘.phtml’ uzantılı shell dosyamızı yüklüyoruz.
+
+![image](/blog/images/vulnversity/32.JPG)
+#### Şekil 1.31
+
+Internal ın altında ‘uploads’ dizini olduğunu gözlemliyoruz. Ayrıca yüklediğimiz shell in de başarılı bir şekilde yüklenmiş olduğunu buradan gözlemleyebiliyoruz.
+
+![image](/blog/images/vulnversity/33.JPG)
+#### Şekil 1.32
+
+Shell imizdeki port u dinlemeye alıp, sayfanın /uploads dizininden shellimizi çalıştırıyoruz.
+
+![image](/blog/images/vulnversity/34.JPG)
+#### Şekil 1.33
+
+Bunun sonucunda bağlantı sağlamış oluyoruz.
+
+![image](/blog/images/vulnversity/35.JPG)
+#### Şekil 1.34
+
+Web sunucusunu yöneten kullanıcıyı bulmak için /etc/passwd dizininden kullanıcıları inceleyerek ilgili kullanıcıyı elde ediyoruz.
+
+![image](/blog/images/vulnversity/36.JPG)
+#### Şekil 1.35
+
+Task içerisindeki flag i de user.txt dosyası içerisinden elde ediyoruz.
+
+![image](/blog/images/vulnversity/38.JPG)
+#### Şekil 1.36
+
+Son Task imizde SUID özelliğine sahip dosyaları listelemek için;
+![image](/blog/images/vulnversity/a.JPG) komutunu kullanabiliriz.
+
+Bunun sonucunda aşağıdaki gibi bir çıktı elde ediyoruz.
+
+![image](/blog/images/vulnversity/40.JPG)
+#### Şekil 1.37
+
+
+‘/bin/systemctl’ root yetkisi elde etme işlemlerinde kullanabileceğimiz bir dizin olduğu için ilgili cevabın bu olduğunu düşündüm ve cevap alanına yazdığımızda zaman doğru olduğunu gözlemliyoruz.
+
+![image](/blog/images/vulnversity/41.JPG)
+#### Şekil 1.38
