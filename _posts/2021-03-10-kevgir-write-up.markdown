@@ -7,7 +7,7 @@ date: 2021-03-10 00:00:00 +0300
 
 ----------------------------------------------
 
-Zafiyetli makineyi <a href="https://canyoupwn.me/kevgir-vulnerable-vm/">buradan</a> indirebilirsiniz.
+( Zafiyetli makineyi <a href="https://canyoupwn.me/kevgir-vulnerable-vm/">buradan</a> indirebilirsiniz. )
 
 
 • Kali Linux ve Kevgir makinesini aynı NAT ağına bağladım.
